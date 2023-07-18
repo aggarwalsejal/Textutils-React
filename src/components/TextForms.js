@@ -103,6 +103,18 @@ export default function TextForms(props) {
       });
     setText(newtext.join(" "));
   };
+  //alternate conversion
+  const onAlternatingCase = () => {
+    let newtext = "";
+    for (let index = 0; index < text.length; index++) {
+      if (index % 2 === 0) {
+        newtext += text[index].toLowerCase();
+      } else {
+        newtext += text[index].toUpperCase();
+      }
+    }
+    setText(newtext);
+  };
   return (
     <>
       <div className="mb-3">
@@ -173,6 +185,12 @@ export default function TextForms(props) {
         </button>
         <button className="btn btn-primary  mx-2 my-4" onClick={handletext}>
           Generalised Text
+        </button>
+        <button
+          className="btn btn-primary  mx-2 my-4"
+          onClick={onAlternatingCase}
+        >
+          Alternating Text
         </button>
           </div>
       </div>
