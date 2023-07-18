@@ -4,6 +4,7 @@ export default function TextForms(props) {
   // eslint-disable-next-line
   const [text, setText] = useState("");
   const [theme, setTheme] = useState("light");
+  const [weight, setStyle] = useState("");
 //text reverse
   const handleReverse = () => {
     let newtext = "";
@@ -31,6 +32,11 @@ export default function TextForms(props) {
       setTheme("light");
     }
   };
+  //to make the text bold
+  const handleBold = () => {
+    if (weight.fontWeight === "normal") setStyle({ fontWeight: "bold" });
+    else setStyle({ fontWeight: "normal" });
+  };
 
   return (
     <>
@@ -42,6 +48,7 @@ export default function TextForms(props) {
           className="form-control mt-3"
           placeholder="Type Something"
           value={text}
+          style={Object.assign({},weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
           id="myBox"
           rows="12"
           onChange={handleOnChnage}
@@ -57,6 +64,9 @@ export default function TextForms(props) {
           </button>
           <button className="btn btn-primary  mx-2 my-4" onClick={toggleTheme}>
             Theme
+          </button>
+          <button className="btn btn-primary  mx-2 my-4" onClick={handleBold}>
+            Bold
           </button>
           </div>
       </div>
