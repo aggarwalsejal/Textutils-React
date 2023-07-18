@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 export default function TextForms(props) {
+  // eslint-disable-next-line
+  const [text, setText] = useState("");
+  const [theme, setTheme] = useState("light");
 //text reverse
   const handleReverse = () => {
     let newtext = "";
@@ -13,7 +16,22 @@ export default function TextForms(props) {
   const handleOnChnage = (event) => {
     setText(event.target.value);
   };
-    const [text, setText] = useState("");
+  //to change the theme of the textarea
+  const toggleTheme = () => {
+    if (theme === "light") {
+      var input1 = document.getElementById('myBox');
+ input1.style.backgroundColor = 'black';
+ input1.style.color = 'white';
+ setTheme("dark");
+    }
+    else{
+      var input2= document.getElementById('myBox');
+      input2.style.backgroundColor = 'white';
+ input2.style.color = 'black';
+      setTheme("light");
+    }
+  };
+
   return (
     <>
       <div className="mb-3">
@@ -36,6 +54,9 @@ export default function TextForms(props) {
             onClick={handleReverse}
           >
             Reverse
+          </button>
+          <button className="btn btn-primary  mx-2 my-4" onClick={toggleTheme}>
+            Theme
           </button>
           </div>
       </div>
