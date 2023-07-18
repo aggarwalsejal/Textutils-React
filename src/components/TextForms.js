@@ -8,9 +8,7 @@ export default function TextForms(props) {
   const [Family, setFamily] = useState({
     fontFamily: "Arial",
   });
-  const [line, setLine] = useState({
-    textDecorationLine: "null",
-  });
+  const [line, setLine] = useState("");
 //text reverse
   const handleReverse = () => {
     let newtext = "";
@@ -50,11 +48,24 @@ export default function TextForms(props) {
   };
   //to make text underlined
   const handleUnderline = () => {
-    if (line.textDecorationLine === "null")
+    if (line.textDecorationLine === "null"){
       setLine({ textDecorationLine: "underline" });
-    else setLine({ textDecorationLine: "null" });
-    props.showAlert("Text is underlined now","success");
+    }
+    else {
+      var input2= document.getElementById('myBox');
+      input2.style.textDecoration = "underline"
+    setLine({ textDecorationLine: "null" })
+    }
   };
+  const leftAlign = () => {
+    document.getElementById("myBox").style.textAlign = "left";
+  }
+  const rightAlign = () => {
+    document.getElementById("myBox").style.textAlign = "right";
+  }
+  const centerAlign = () => {
+    document.getElementById("myBox").style.textAlign = "center";
+  }
   return (
     <>
       <div className="mb-3">
@@ -93,6 +104,15 @@ export default function TextForms(props) {
             onClick={handleUnderline}
           >
             Underline
+          </button>
+          <button className="btn btn-primary  mx-2 my-4" onClick={leftAlign}>
+            Left Align
+          </button>
+          <button className="btn btn-primary  mx-2 my-4" onClick={rightAlign}>
+            Right Align
+          </button>
+          <button className="btn btn-primary  mx-2 my-4" onClick={centerAlign}>
+            Center Align
           </button>
           </div>
       </div>
