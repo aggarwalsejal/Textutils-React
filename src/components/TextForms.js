@@ -193,6 +193,19 @@ export default function TextForms(props) {
           Alternating Text
         </button>
           </div>
+          <div className="container my-3" onClick={props.toggleMode}>
+        <h1>Your Text Summary</h1>
+        <p>
+          {text.split(/[ ]+/).filter((a1)=>{return a1.length!=0}).length} words and {text.length} characters
+        </p>
+        <p>
+          {0.008 * text.split(" ").length} minutes would be required to read the
+          above entered text
+        </p>
+        <h2>Preview</h2>
+        <p>{text.length>0?`${text}`: "Enter something in the textbox preview"}</p>
+
+      </div>
       </div>
     </>
   );
