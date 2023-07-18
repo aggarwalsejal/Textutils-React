@@ -57,15 +57,23 @@ export default function TextForms(props) {
     setLine({ textDecorationLine: "null" })
     }
   };
+  //to left align the text
   const leftAlign = () => {
     document.getElementById("myBox").style.textAlign = "left";
   }
+  //to right align te text
   const rightAlign = () => {
     document.getElementById("myBox").style.textAlign = "right";
   }
+  //to center the text
   const centerAlign = () => {
     document.getElementById("myBox").style.textAlign = "center";
   }
+  //convert upper case
+  const handleUpClick = () => {
+    let newtext = text.toUpperCase();
+    setText(newtext);
+  };
   return (
     <>
       <div className="mb-3">
@@ -114,6 +122,11 @@ export default function TextForms(props) {
           <button className="btn btn-primary  mx-2 my-4" onClick={centerAlign}>
             Center Align
           </button>
+          </div>
+          <div>
+          <button className="btn btn-primary mx-2 my-4" onClick={handleUpClick}>
+          Convert to Upper Case
+        </button>
           </div>
       </div>
     </>
