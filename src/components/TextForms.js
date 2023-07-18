@@ -88,6 +88,11 @@ export default function TextForms(props) {
   const handleClear = () => {
     setText("");
   };
+  //remove extra spaces
+  const handleExtraSpace = () => {
+    let newtext = text.split(/[ ]+/);
+    setText(newtext.join(" "));
+  };
   return (
     <>
       <div className="mb-3">
@@ -149,6 +154,12 @@ export default function TextForms(props) {
         </button>
         <button className="btn btn-primary  mx-2 my-4" onClick={handleClear}>
           Clear
+        </button>
+        <button
+          className="btn btn-primary  mx-2 my-4"
+          onClick={handleExtraSpace}
+        >
+          Remove Extra Spaces
         </button>
           </div>
       </div>
