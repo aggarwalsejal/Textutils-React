@@ -16,6 +16,7 @@ export default function TextForms(props) {
       newtext += text[index];
     }
     setText(newtext);
+    props.showAlert("Text has been Reversed","success");
   };
   //onchange function
   const handleOnChnage = (event) => {
@@ -28,23 +29,33 @@ export default function TextForms(props) {
  input1.style.backgroundColor = 'black';
  input1.style.color = 'white';
  setTheme("dark");
+ props.showAlert("Theme has been updated to Dark","success");
     }
     else{
       var input2= document.getElementById('myBox');
       input2.style.backgroundColor = 'white';
  input2.style.color = 'black';
       setTheme("light");
+      props.showAlert("Theme has been updated to Light","success");
     }
   };
   //to make the text bold
   const handleBold = () => {
-    if (weight.fontWeight === "normal") setStyle({ fontWeight: "bold" });
-    else setStyle({ fontWeight: "normal" });
+    if (weight.fontWeight === "normal"){ setStyle({ fontWeight: "bold" });
+    props.showAlert("Text is converted to bold","success");
+  }
+    else {setStyle({ fontWeight: "normal" });
+    props.showAlert("Text is converted to normal","success");
+  }
   };
   //to make the text italic
   const handleItalic = () => {
-    if (Family.fontFamily === "Arial") setFamily({ fontFamily: "Italic" });
-    else setFamily({ fontFamily: "Arial" });
+    if (Family.fontFamily === "Arial") {setFamily({ fontFamily: "Italic" });
+    props.showAlert("Text is converted to italic","success");
+  }
+    else {setFamily({ fontFamily: "Arial" });
+    props.showAlert("Text is converted to normal","success");
+}
   };
   //to make text underlined
   const handleUnderline = () => {
@@ -56,42 +67,51 @@ export default function TextForms(props) {
       input2.style.textDecoration = "underline"
     setLine({ textDecorationLine: "null" })
     }
+    props.showAlert("Text is underlined","success");
   };
   //to left align the text
   const leftAlign = () => {
     document.getElementById("myBox").style.textAlign = "left";
+    props.showAlert("Text is left aligned","success");
   }
   //to right align te text
   const rightAlign = () => {
     document.getElementById("myBox").style.textAlign = "right";
+    props.showAlert("Text is right aligned","success");
   }
   //to center the text
   const centerAlign = () => {
     document.getElementById("myBox").style.textAlign = "center";
+    props.showAlert("Text is center aligned","success");
   }
   //convert upper case
   const handleUpClick = () => {
     let newtext = text.toUpperCase();
     setText(newtext);
+    props.showAlert("Converted to Uppercase","success");
   };
   //convert lower case
   const handleLoClick = () => {
     let newtext = text.toLowerCase();
     setText(newtext);
+    props.showAlert("Converted to Lowercase","success");
   };
   //copy text to clipboard
   const handleCopy = () => {
     var text = document.getElementById("myBox");
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text is copied","success");
   };
   //clear textarea
   const handleClear = () => {
     setText("");
+    props.showAlert("Textarea is clear","success");
   };
   //remove extra spaces
   const handleExtraSpace = () => {
     let newtext = text.split(/[ ]+/);
     setText(newtext.join(" "));
+    props.showAlert("Extra spaces has been removed","success");
   };
   //general text
   const handletext = () => {
@@ -102,6 +122,7 @@ export default function TextForms(props) {
         return text.charAt(0).toUpperCase() + text.slice(1);
       });
     setText(newtext.join(" "));
+    props.showAlert("General Text","success");
   };
   //alternate conversion
   const onAlternatingCase = () => {
@@ -114,6 +135,7 @@ export default function TextForms(props) {
       }
     }
     setText(newtext);
+    props.showAlert("Alternative conversion of text","success");
   };
   return (
     <>
@@ -193,10 +215,10 @@ export default function TextForms(props) {
           Alternating Text
         </button>
           </div>
-          <div className="container my-3" onClick={props.toggleMode}>
+          <div className="container my-3">
         <h1>Your Text Summary</h1>
         <p>
-          {text.split(/[ ]+/).filter((a1)=>{return a1.length!=0}).length} words and {text.length} characters
+        {text.split(/[ ]+/).filter((a1)=>{return a1.length!=0}).length} words and {text.length} characters
         </p>
         <p>
           {0.008 * text.split(" ").length} minutes would be required to read the

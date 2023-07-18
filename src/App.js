@@ -1,4 +1,5 @@
 import './App.css';
+import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import React, {useState} from 'react';
 import {
@@ -10,6 +11,17 @@ import TextForms from './components/TextForms';
 function App() {
   // eslint-disable-next-line
   const[mode,setMode]=useState('dark');
+  const[alert,setAlert]=useState(null);
+  const showAlert = (message, type) => {
+    setAlert({
+      msg:message,
+      type:type
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 3000);
+  }
+
   const toggleMode = () => {
     if(mode==='light'){
       setMode("dark");
@@ -25,8 +37,9 @@ function App() {
   return (
     <Router>
    <Navbar title="TEXTUTILS" mode={mode} toggleMode={toggleMode}/>
+   <Alert alert={alert}/>
 <div className='container mt-5'>
-  <TextForms></TextForms>
+  <TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case"></TextForms>
 </div>
    </Router>
   );
