@@ -5,6 +5,9 @@ export default function TextForms(props) {
   const [text, setText] = useState("");
   const [theme, setTheme] = useState("light");
   const [weight, setStyle] = useState("");
+  const [Family, setFamily] = useState({
+    fontFamily: "Arial",
+  });
 //text reverse
   const handleReverse = () => {
     let newtext = "";
@@ -37,7 +40,11 @@ export default function TextForms(props) {
     if (weight.fontWeight === "normal") setStyle({ fontWeight: "bold" });
     else setStyle({ fontWeight: "normal" });
   };
-
+  //to make the text italic
+  const handleItalic = () => {
+    if (Family.fontFamily === "Arial") setFamily({ fontFamily: "Italic" });
+    else setFamily({ fontFamily: "Arial" });
+  };
   return (
     <>
       <div className="mb-3">
@@ -48,7 +55,7 @@ export default function TextForms(props) {
           className="form-control mt-3"
           placeholder="Type Something"
           value={text}
-          style={Object.assign({},weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
+          style={Object.assign({},Family, weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
           id="myBox"
           rows="12"
           onChange={handleOnChnage}
@@ -67,6 +74,9 @@ export default function TextForms(props) {
           </button>
           <button className="btn btn-primary  mx-2 my-4" onClick={handleBold}>
             Bold
+          </button>
+          <button className="btn btn-primary  mx-2 my-4" onClick={handleItalic}>
+            Italic
           </button>
           </div>
       </div>
