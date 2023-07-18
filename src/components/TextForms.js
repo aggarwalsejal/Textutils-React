@@ -84,6 +84,10 @@ export default function TextForms(props) {
     var text = document.getElementById("myBox");
     navigator.clipboard.writeText(text.value);
   };
+  //clear textarea
+  const handleClear = () => {
+    setText("");
+  };
   return (
     <>
       <div className="mb-3">
@@ -142,6 +146,9 @@ export default function TextForms(props) {
         </button>
         <button className="btn btn-primary mx-2 my-4" onClick={handleCopy}>
           Copy To ClipBoard
+        </button>
+        <button className="btn btn-primary  mx-2 my-4" onClick={handleClear}>
+          Clear
         </button>
           </div>
       </div>
