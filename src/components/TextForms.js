@@ -79,6 +79,11 @@ export default function TextForms(props) {
     let newtext = text.toLowerCase();
     setText(newtext);
   };
+  //copy text to clipboard
+  const handleCopy = () => {
+    var text = document.getElementById("myBox");
+    navigator.clipboard.writeText(text.value);
+  };
   return (
     <>
       <div className="mb-3">
@@ -134,6 +139,9 @@ export default function TextForms(props) {
         </button>
         <button className="btn btn-primary mx-2 my-4" onClick={handleLoClick}>
           Convert to Lower Case
+        </button>
+        <button className="btn btn-primary mx-2 my-4" onClick={handleCopy}>
+          Copy To ClipBoard
         </button>
           </div>
       </div>
