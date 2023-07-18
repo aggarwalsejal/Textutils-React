@@ -8,6 +8,9 @@ export default function TextForms(props) {
   const [Family, setFamily] = useState({
     fontFamily: "Arial",
   });
+  const [line, setLine] = useState({
+    textDecorationLine: "null",
+  });
 //text reverse
   const handleReverse = () => {
     let newtext = "";
@@ -45,6 +48,13 @@ export default function TextForms(props) {
     if (Family.fontFamily === "Arial") setFamily({ fontFamily: "Italic" });
     else setFamily({ fontFamily: "Arial" });
   };
+  //to make text underlined
+  const handleUnderline = () => {
+    if (line.textDecorationLine === "null")
+      setLine({ textDecorationLine: "underline" });
+    else setLine({ textDecorationLine: "null" });
+    props.showAlert("Text is underlined now","success");
+  };
   return (
     <>
       <div className="mb-3">
@@ -55,7 +65,7 @@ export default function TextForms(props) {
           className="form-control mt-3"
           placeholder="Type Something"
           value={text}
-          style={Object.assign({},Family, weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
+          style={Object.assign({},Family, line, weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
           id="myBox"
           rows="12"
           onChange={handleOnChnage}
@@ -77,6 +87,12 @@ export default function TextForms(props) {
           </button>
           <button className="btn btn-primary  mx-2 my-4" onClick={handleItalic}>
             Italic
+          </button>
+          <button
+            className="btn btn-primary  mx-2 my-4"
+            onClick={handleUnderline}
+          >
+            Underline
           </button>
           </div>
       </div>
