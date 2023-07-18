@@ -93,6 +93,16 @@ export default function TextForms(props) {
     let newtext = text.split(/[ ]+/);
     setText(newtext.join(" "));
   };
+  //general text
+  const handletext = () => {
+    let newtext = text
+      .toLowerCase()
+      .split(/[ ]+/)
+      .map((text) => {
+        return text.charAt(0).toUpperCase() + text.slice(1);
+      });
+    setText(newtext.join(" "));
+  };
   return (
     <>
       <div className="mb-3">
@@ -160,6 +170,9 @@ export default function TextForms(props) {
           onClick={handleExtraSpace}
         >
           Remove Extra Spaces
+        </button>
+        <button className="btn btn-primary  mx-2 my-4" onClick={handletext}>
+          Generalised Text
         </button>
           </div>
       </div>
