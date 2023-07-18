@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
 export default function TextForms(props) {
+//text reverse
+  const handleReverse = () => {
+    let newtext = "";
+    for (let index = text.length - 1; index >= 0; index--) {
+      newtext += text[index];
+    }
+    setText(newtext);
+  };
   //onchange function
   const handleOnChnage = (event) => {
     setText(event.target.value);
@@ -22,7 +30,14 @@ export default function TextForms(props) {
         >
            <p>{text.length>0?`${text}`: ""}</p>
         </textarea>
-        
+        <div>
+          <button
+            className="btn btn-primary  mx-2 my-4"
+            onClick={handleReverse}
+          >
+            Reverse
+          </button>
+          </div>
       </div>
     </>
   );
