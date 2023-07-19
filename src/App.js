@@ -2,8 +2,12 @@ import './App.css';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import React, {useState} from 'react';
+import About from './components/About'
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
 } from "react-router-dom";
 import TextForms from './components/TextForms';
 
@@ -40,7 +44,15 @@ function App() {
    <Navbar title="TEXTUTILS" mode={mode} toggleMode={toggleMode}/>
    <Alert alert={alert}/>
 <div className='container mt-5'>
-  <TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
+  <Routes>
+    <Route exact path="/about" element={ <About />}>
+    </Route>
+    </Routes>
+    <Routes>
+    <Route exact path="/" element={<TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
+   }>
+     </Route>
+  </Routes>
 </div>
    </Router>
   );
