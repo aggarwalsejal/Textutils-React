@@ -11,12 +11,17 @@ export default function TextForms(props) {
   const [line, setLine] = useState("");
 //text reverse
   const handleReverse = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     let newtext = "";
     for (let index = text.length - 1; index >= 0; index--) {
       newtext += text[index];
     }
     setText(newtext);
     props.showAlert("Text has been Reversed","success");
+  }
   };
   //onchange function
   const handleOnChnage = (event) => {
@@ -41,24 +46,38 @@ export default function TextForms(props) {
   };
   //to make the text bold
   const handleBold = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     if (weight.fontWeight === "normal"){ setStyle({ fontWeight: "bold" });
     props.showAlert("Text is converted to bold","success");
   }
     else {setStyle({ fontWeight: "normal" });
     props.showAlert("Text is converted to normal","success");
   }
+}
   };
   //to make the text italic
   const handleItalic = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     if (Family.fontFamily === "Arial") {setFamily({ fontFamily: "Italic" });
     props.showAlert("Text is converted to italic","success");
   }
     else {setFamily({ fontFamily: "Arial" });
     props.showAlert("Text is converted to normal","success");
 }
+    }
   };
   //to make text underlined
   const handleUnderline = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     if (line.textDecorationLine === "null"){
       setLine({ textDecorationLine: "underline" });
     }
@@ -68,53 +87,98 @@ export default function TextForms(props) {
     setLine({ textDecorationLine: "null" })
     }
     props.showAlert("Text is underlined","success");
+  }
   };
   //to left align the text
   const leftAlign = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     document.getElementById("myBox").style.textAlign = "left";
     props.showAlert("Text is left aligned","success");
+    }
   }
   //to right align te text
   const rightAlign = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     document.getElementById("myBox").style.textAlign = "right";
     props.showAlert("Text is right aligned","success");
+    }
   }
   //to center the text
   const centerAlign = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     document.getElementById("myBox").style.textAlign = "center";
     props.showAlert("Text is center aligned","success");
+    }
   }
   //convert upper case
   const handleUpClick = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     let newtext = text.toUpperCase();
     setText(newtext);
     props.showAlert("Converted to Uppercase","success");
+    }
   };
   //convert lower case
   const handleLoClick = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     let newtext = text.toLowerCase();
     setText(newtext);
     props.showAlert("Converted to Lowercase","success");
+    }
   };
   //copy text to clipboard
   const handleCopy = () => {
+    if(document.getElementById("myBox").value===""){
+      props.showAlert("There is no text to copy","danger");
+    }
+    else{
     var text = document.getElementById("myBox");
     navigator.clipboard.writeText(text.value);
     props.showAlert("Text is copied","success");
+    }
   };
   //clear textarea
   const handleClear = () => {
+    if(text===""){
+      props.showAlert("No text present to clear","danger");
+    }
+    else{
     setText("");
     props.showAlert("Textarea is clear","success");
+    }
   };
   //remove extra spaces
   const handleExtraSpace = () => {
+    if(text===""){
+      props.showAlert("There is no extra spaces avaiable currently","danger");
+    }
+    else{
     let newtext = text.split(/[ ]+/);
     setText(newtext.join(" "));
     props.showAlert("Extra spaces has been removed","success");
+    }
   };
   //general text
   const handletext = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     let newtext = text
       .toLowerCase()
       .split(/[ ]+/)
@@ -123,9 +187,14 @@ export default function TextForms(props) {
       });
     setText(newtext.join(" "));
     props.showAlert("General Text","success");
+    }
   };
   //alternate conversion
   const onAlternatingCase = () => {
+    if(text===""){
+      props.showAlert("Enter text","danger");
+    }
+    else{
     let newtext = "";
     for (let index = 0; index < text.length; index++) {
       if (index % 2 === 0) {
@@ -136,6 +205,7 @@ export default function TextForms(props) {
     }
     setText(newtext);
     props.showAlert("Alternative conversion of text","success");
+  }
   };
   return (
     <>
@@ -221,7 +291,7 @@ export default function TextForms(props) {
         {text.split(/[ ]+/).filter((a1)=>{return a1.length!==0}).length} words and {text.length} characters
         </p>
         <p>
-          {0.008 * text.split(" ").length} minutes would be required to read the
+          {0.008 * text.split("").length} minutes would be required to read the
           above entered text
         </p>
         <h2>Preview</h2>
