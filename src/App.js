@@ -21,12 +21,13 @@ function App() {
       setAlert(null);
     }, 3000);
   }
-
+//dark theme
   const toggleMode = () => {
     if(mode==='light'){
       setMode("dark");
-      document.body.style.backgroundColor='blue'
+      document.body.style.backgroundColor='#042743'
       document.body.style.color='white'
+      
     }
     else{
       setMode("light");
@@ -39,7 +40,7 @@ function App() {
    <Navbar title="TEXTUTILS" mode={mode} toggleMode={toggleMode}/>
    <Alert alert={alert}/>
 <div className='container mt-5'>
-  <TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case"></TextForms>
+  <TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
 </div>
    </Router>
   );
