@@ -6,8 +6,7 @@ import About from './components/About'
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import TextForms from './components/TextForms';
 
