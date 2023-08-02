@@ -13,7 +13,7 @@ import TextForms from './components/TextForms';
 
 function App() {
   // eslint-disable-next-line
-  const[mode,setMode]=useState('dark');
+  const[mode,setMode]=useState('light');
   const[alert,setAlert]=useState(null);
   const showAlert = (message, type) => {
     setAlert({

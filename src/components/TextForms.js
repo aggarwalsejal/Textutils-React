@@ -4,11 +4,18 @@ export default function TextForms(props) {
   // eslint-disable-next-line
   const [text, setText] = useState("");
   const [theme, setTheme] = useState("light");
-  const [weight, setStyle] = useState("");
-  const [Family, setFamily] = useState({
-    fontFamily: "Arial",
+  const [weight, setStyle] = useState({
+    fontWeight: "normal"
   });
-  const [line, setLine] = useState("");
+  
+  const[style,setStlye]=useState(
+    {
+      fontStyle: "normal"
+    }
+  );
+  const [line, setLine] = useState({
+    textDecorationLine: "none" 
+  });
 //text reverse
   const handleReverse = () => {
     if(text===""){
@@ -33,6 +40,7 @@ export default function TextForms(props) {
       var input1 = document.getElementById('myBox');
  input1.style.backgroundColor = 'black';
  input1.style.color = 'white';
+
  setTheme("dark");
  props.showAlert("Theme has been updated to Dark","success");
     }
@@ -64,10 +72,10 @@ export default function TextForms(props) {
       props.showAlert("Enter text","danger");
     }
     else{
-    if (Family.fontFamily === "Arial") {setFamily({ fontFamily: "Italic" });
+    if (style.fontStyle === "normal") {setStlye({ fontStyle: "italic" });
     props.showAlert("Text is converted to italic","success");
   }
-    else {setFamily({ fontFamily: "Arial" });
+    else {setStlye({ fontStyle: "normal" });
     props.showAlert("Text is converted to normal","success");
 }
     }
@@ -78,15 +86,16 @@ export default function TextForms(props) {
       props.showAlert("Enter text","danger");
     }
     else{
-    if (line.textDecorationLine === "null"){
+    if (line.textDecorationLine === "none"){
       setLine({ textDecorationLine: "underline" });
+      props.showAlert("Text is underlined","success");
     }
     else {
       var input2= document.getElementById('myBox');
       input2.style.textDecoration = "underline"
-    setLine({ textDecorationLine: "null" })
+    setLine({ textDecorationLine: "none" })
+    props.showAlert("Text is normal","success");
     }
-    props.showAlert("Text is underlined","success");
   }
   };
   //to left align the text
@@ -217,7 +226,7 @@ export default function TextForms(props) {
           className="form-control mt-3"
           placeholder="Type Something"
           value={text}
-          style={Object.assign({},Family, line, weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
+          style={Object.assign({},style, line, weight, {backgorundColor: props.mode==='dard'?'white':'dark'},{color: props.mode==='dard'?'grey':'light'} )}
           id="myBox"
           rows="12"
           onChange={handleOnChnage}
