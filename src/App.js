@@ -43,7 +43,7 @@ function App() {
    <Alert alert={alert}/>
 <div className='container mt-5'>
     <Routes>
-    <Route exact path="/Textutils-React" element={<TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
+    <Route exact path="/Textutils-React/" element={<TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
    }>
     </Route>
     </Routes>
