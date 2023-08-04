@@ -2,7 +2,6 @@ import './App.css';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import React, {useState} from 'react';
-import About from './components/About'
 import {
   BrowserRouter as Router,
   Routes,
@@ -43,15 +42,11 @@ function App() {
    <Navbar title="TEXTUTILS" mode={mode} toggleMode={toggleMode}/>
    <Alert alert={alert}/>
 <div className='container mt-5'>
-  <Routes>
-    <Route exact path="/about" element={ <About />}>
+    <Routes>
+    <Route exact path="/Textutils-React" element={<TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
+   }>
     </Route>
     </Routes>
-    <Routes>
-    <Route exact path="/" element={<TextForms showAlert={showAlert} heading="Enter the data in below box - Upper Case, Lower Case" mode={mode} toggleMode={toggleMode}></TextForms>
-   }>
-     </Route>
-  </Routes>
 </div>
    </Router>
   );
