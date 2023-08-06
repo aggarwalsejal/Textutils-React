@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route
             exact
-            path="/Textutils-React/"
+            path="/"
             element={
               <TextForms
                 heading="Enter the data in below box - Upper Case, Lower Case"
