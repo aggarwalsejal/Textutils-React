@@ -3,12 +3,12 @@
 <p align=center>Visit the website and try it once https://textutils.aggarwalsejal.com/ :heart:</p>
 
 
-:bookmark_tabs: What’s In This Document
-How to install React
-How to create your first React App
-Script require to run the project
-Where to see the running project
-React Packages Used
+# :bookmark_tabs: What’s In This Document
+<li>Pre-requisite to run React</li>
+<li>How to create your first React App</li>
+<li>Script require to run the project</li>
+<li>Where to see the running project</li>
+<li>React Packages Used</li>
 
 
 # Getting Started with Create React App
