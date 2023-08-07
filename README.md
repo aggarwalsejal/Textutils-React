@@ -10,6 +10,28 @@
 <li>Where to see the running project</li>
 <li>React Packages Used</li>
 
+# :point_right: Pre-requisite to run React
+
+Install Node.js and npm in the local machine. Use [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) docuementation for info and set up steps.
+
+# :rocket: How to create your first React App
+
+:one: Create a folder for React Project<br>
+
+:two: Open IDE for that folder<br>
+
+:three: Run the :arrow_down: command in terminal
+
+```properties
+npx create-react-app my-app
+```
+```properties
+cd my-app
+```
+```properties
+npm start
+```
+Read [this](https://create-react-app.dev/) documentation for more details
 
 # Getting Started with Create React App
 
