@@ -1,6 +1,20 @@
+<img width="1728" alt="Screenshot 2023-08-04 at 11 20 13 PM" src="https://github.com/sejal175/Textutils-React/assets/56756275/af762c9c-5399-476e-9b7a-fa490173b746">
+<p style="text-align: center;">TextUtils is a React based website to play with the words and manipulate them</p>
+<p style="text-align: center">Visit the website and try it once https://textutils.aggarwalsejal.com/ :heart:</p>
+
+
+What’s In This Document
+How to install React
+How to create your first React App
+Script require to run the project
+Where to see the running project
+React Packages Used
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
