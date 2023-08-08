@@ -6,7 +6,7 @@
 
 # :bookmark_tabs: What’s In This Document
 * [Pre-requisite to run React](#pre-requisite-to-run-react)
-* [How to create your first React App](how-to-create-your-first-react-app)
+* [How to create your first React App](#how-to-create-your-first-react-app)
 * [Script require to run the project](script-require-to-run-the-project)
 * [Where to see the running project](where-to-see-the-running-project)
 * [React Packages Used](react-packages-used)
