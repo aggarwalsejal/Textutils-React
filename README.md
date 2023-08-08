@@ -70,7 +70,7 @@ In the project directory, you have the following scripts to run:
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 For  more details, use [this](https://react.dev/) link
 
-<h1> :boom: React Packages Used</h1>
+<h2> :boom: React Packages Used</h2>
 
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
