@@ -4,17 +4,17 @@
 
 
 # :bookmark_tabs: What’s In This Document
-<li>Pre-requisite to run React</li>
-<li>How to create your first React App</li>
-<li>Script require to run the project</li>
-<li>Where to see the running project</li>
-<li>React Packages Used</li>
+* [Pre-requisite to run React](pre-requisite-to-run-react)
+* [How to create your first React App](how-to-create-your-first-react-app)
+* [Script require to run the project](script-require-to-run-the-project)
+* [Where to see the running project](where-to-see-the-running-project)
+* [React Packages Used](react-packages-used)
 
-# :point_right: Pre-requisite to run React
+<h1> :point_right: Pre-requisite to run React </h1>
 
 Install Node.js and npm in the local machine. Use [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) docuementation for info and set up steps.
 
-# :rocket: How to create your first React App
+<h1> :rocket: How to create your first React App</h1>
 
 :one: Create a folder for React Project<br>
 
@@ -34,7 +34,7 @@ npm start
 Read [this](https://create-react-app.dev/) documentation for more details
 
 
-# :bookmark: Script require to run the project
+<h1> :bookmark: Script require to run the project</h1>
 
 <li>For Bootstrap, add Script for Javascript and CSS</li><br>
 
@@ -65,11 +65,11 @@ In the project directory, you have the following scripts to run:
 &nbsp; &nbsp; &nbsp; See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-# :eyes: Where to see the running project
+<h1> :eyes: Where to see the running project</h1>
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 For  more details, use [this](https://react.dev/) link
 
-# :boom: React Packages Used
+<h1> :boom: React Packages Used</h1>
 
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
