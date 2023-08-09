@@ -6,17 +6,17 @@
 
 # :bookmark_tabs: What’s In This Document
 
-* [Pre-requisite to run React](pre-requisite-to-run-react)
-* [How to create your first React App](#how-to-create-your-first-react-app)
+* [Pre-requisite to run React](#point_right-pre-requisite-to-run-react)
+* [How to create your first React App](#rocket-how-to-create-your-first-react-app)
 * [Script require to run the project](script-require-to-run-the-project)
 * [Where to see the running project](where-to-see-the-running-project)
 * [React Packages Used](react-packages-used)
 
-<h1> :point_right: Pre-requisite to run React </h1>
+# :point_right: Pre-requisite to run React
 
 Install Node.js and npm in the local machine. Use [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) docuementation for info and set up steps.
 
-<h1> :rocket: How to create your first React App</h1>
+# :rocket: How to create your first React App
 
 :one: Create a folder for React Project<br>
 
