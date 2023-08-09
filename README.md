@@ -58,7 +58,7 @@ In the project directory, you have the following scripts to run:
 
 ### `npm run build`
 
-&nbsp; &nbsp; &nbsp; Builds the app for production to `build` folder. It correctly bundles React in production mode and optimizes build for best performance.
+&nbsp; &nbsp; &nbsp; Builds the app for production to build folder. It correctly bundles React in production mode and optimizes build for best performance.
 
 &nbsp; &nbsp; &nbsp; The build is minified and the filenames include the hashes.\
 &nbsp; &nbsp; &nbsp; Your app is ready to be deployed!
