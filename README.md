@@ -1,7 +1,7 @@
 <img width="1728"  alt="Screenshot 2023-08-04 at 11 20 13 PM" src="https://github.com/sejal175/Textutils-React/assets/56756275/af762c9c-5399-476e-9b7a-fa490173b746">
 
 <h3 align=center > :smile: <strong>TextUtils</strong> is a <em><strong>React website</strong></em> to play with the words and manipulate them :smile: </h3>
-<p align=center>Visit the website and try it once https://textutils.aggarwalsejal.com/ :heart:</p>
+<p align=center>:heart: Visit the website and try it once https://textutils.aggarwalsejal.com/ :heart:</p>
 
 
 # :bookmark_tabs: What’s In This Document
