@@ -8,9 +8,9 @@
 
 * [Pre-requisite to run React](#point_right-pre-requisite-to-run-react)
 * [How to create your first React App](#rocket-how-to-create-your-first-react-app)
-* [Script require to run the project](script-require-to-run-the-project)
-* [Where to see the running project](where-to-see-the-running-project)
-* [React Packages Used](react-packages-used)
+* [Script require to run the project](#bookmark-script-require-to-run-the-project)
+* [Where to see the running project](#eyes-where-to-see-the-running-project)
+* [React Packages Used](#boom-react-packages-used)
 
 # :point_right: Pre-requisite to run React
 
@@ -36,7 +36,7 @@ npm start
 Read [this](https://create-react-app.dev/) documentation for more details
 
 
-<h1> :bookmark: Script require to run the project</h1>
+# :bookmark: Script require to run the project
 
 <li>For Bootstrap, add Script for Javascript and CSS</li><br>
 
@@ -67,12 +67,12 @@ In the project directory, you have the following scripts to run:
 &nbsp; &nbsp; &nbsp; See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-<h1> :eyes: Where to see the running project</h1>
+# :eyes: Where to see the running project
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 For  more details, use [this](https://react.dev) link
 
-<h2> :boom: React Packages Used</h2>
+# :boom: React Packages Used
 
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
