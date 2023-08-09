@@ -70,7 +70,8 @@ In the project directory, you have the following scripts to run:
 # :eyes: Where to see the running project
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-For  more details, use [this](https://react.dev) link
+
+For more details, use [this](https://react.dev) link
 
 # :boom: React Packages Used
 
@@ -81,6 +82,6 @@ For  more details, use [this](https://react.dev) link
     "react-toastify": "^9.1.3",
     "web-vitals": "^2.1.4"
 
-To read more about, <br>
-react-router-dom package, follow [this](https://www.npmjs.com/package/react-router-dom) link<br>
-react-toastify, follow [this](https://www.npmjs.com/package/react-toastify)  link
+To read more about,
+- react-router-dom, follow [this](https://www.npmjs.com/package/react-router-dom) link
+- react-toastify, follow [this](https://www.npmjs.com/package/react-toastify) link
